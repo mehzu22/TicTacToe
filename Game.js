@@ -6,19 +6,19 @@ class Game {
         this.turn = 0
         this.isGameEnded = false
         this.board = new Board()
-        this.players = [new Player(player0Name, 'X'),
-        new Player(player1Name, 'O')]
+        this.players = [new Player(player0Name, 'X'),new Player(player1Name, 'O')]
     }
     static newGame(player0Name, player1Name) {
         //validation
-        if (player0Name != player1Name || typeof player0Name != 'string'
-            || typeof player1Name != 'string') {
-            return ['Invalid parameter', null]
+        if (player0Name != player1Name || typeof player0Name != 'string' || typeof player1Name != 'string') {
+            return ["Invalid parameter",null]
         }
-        return ['Object Created', new Game(player0Name, player1Name)]
+        
+        return ["Object Created",new Game(player0Name, player1Name)]
     }
 
-    play(cellNumber) {   //validation
+    play(cellNumber) {   
+        //validation
         if (isNaN(cellNumber)) {
             return 'Cell should be a string '
         }
