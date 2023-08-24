@@ -10,7 +10,8 @@ const Game = require("./Game")
 
 //X win condition
 
-let g2 = new Game("P1","P2")
+let g2 = Game.newGame("P1","P2")
+// g2.play(2)
 console.log(g2.play(2))//x
 console.log(g2.play(1))//o
 console.log(g2.play(5))//x
